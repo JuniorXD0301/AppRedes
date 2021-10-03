@@ -1,0 +1,28 @@
+ion-menu {
+    width: 300px;
+}
+
+ion-slides {
+    height: 25%;
+}
+
+.swiper-slide img {
+    max-height: 100%;
+    pointer-events: none;
+}
+
+.productos-destacados {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btn {
+    background: #3880ff;
+    color:#fff;
+    border-radius: 5px;
+}
+
+.div-precio {
+    width: 100%;
+    text-align: end;
+}
