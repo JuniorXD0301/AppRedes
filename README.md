@@ -1,1 +1,1 @@
-# AppRedes
+Aplicación de un app de compra de electrodomesticos
