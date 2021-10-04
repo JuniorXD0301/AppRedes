@@ -6,7 +6,7 @@ function conexion(){
     this.inicia = function(){
         this.pool = mysql.createPool({
             connectionLimit: 10,
-            host: 'localhost:8000',
+            host: 'localhost',
             user: 'root',
             password: '0301',
             database: 'redes'
