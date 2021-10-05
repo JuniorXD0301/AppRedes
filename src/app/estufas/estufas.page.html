@@ -1,0 +1,194 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Genu's App</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Nombre del Cliente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/tabs">Inicio</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag-remove"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/promociones">Promociones</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/cuenta">Cuenta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit"></ion-icon>
+        <ion-label class="texto-menu">Salir</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-content>
+
+   <!-- Seccion de las slides -->
+   <ion-slides>
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/E1.jpg"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/E2.jpg"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/E3.jpg"/>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- Seccion de prodcutos destacados -->
+  <ion-item>
+    <ion-label class="productos-destacados"><b>Estufas</b></ion-label>
+  </ion-item>
+
+  <!-- Producto 1 -->
+  <ion-card>
+    <img src="../../assets/img/e1.png" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Estufa de Piso ABBA 4 Puestos Gas Natural Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div></div>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$456.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 2 -->
+  <ion-card>
+    <img src="../../assets/img/e2.png" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Estufa de Piso HACEB 4 Puestos Gas Natural Romero Reflex Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio"><p>$702.900</p></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 3 -->
+  <ion-card>
+    <img src="../../assets/img/e3.png" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Estufa de Piso HACEB 4 Puestos Gas Natural Romero Gris</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$503.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 4 -->
+  <ion-card>
+    <img src="../../assets/img/e4.png" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Estufa de Piso HACEB 4 Puestos Gas Natural Romero Ultra 50-VF Gris</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$892.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 5 -->
+  <ion-card>
+    <img src="../../assets/img/e5.png" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Estufa de Piso SUPERIOR 4 Puestos Gas Natural 7015 Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$422.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,70 +1,174 @@
-<ion-header>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Genu's App</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Nombre del Cliente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/tabs">Inicio</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag-remove"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/promociones">Promociones</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person"></ion-icon>
+        <ion-label class="texto-menu">Cuenta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit"></ion-icon>
+        <ion-label class="texto-menu">Salir</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
+
 <ion-content>
-  <div class="contenedor">
-    <ion-card>
-      <ion-card-header>
-        <div class="encabezado">
-          <ion-card-title>Televisores</ion-card-title>
-          <a href="http://localhost:8100/products"><ion-icon name="arrow-back-outline"></ion-icon></a>
-        </div>
-      </ion-card-header>
 
-      <ion-card-content>
-        <div class="productos">
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/8806092056091-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w0NDU5NHxpbWFnZS9qcGVnfGltYWdlcy9oNzYvaGMxLzEwNzU1MjEzMTMxODA2LmpwZ3xkZDRkOTZiZjI1YWI2Njc1ZGFhOTdhOTYxMDA3OTZhZmQwZTVlNzQyYjFkOGQ4YjU0YjQwNzBkMTg1YWExYjdm">
-            </div>
-            <div class="prod_text">
-              <h5><b>TV LG 43" Pulgadas 108 cm 43UP7750 4K-UHD LED Plano Smart TV</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+  <!-- Seccion de prodcutos destacados -->
+  <ion-item>
+    <ion-label class="productos-destacados"><b>Televisores</b></ion-label>
+  </ion-item>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/8806092040595-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w0Mjg5MnxpbWFnZS9qcGVnfGltYWdlcy9oMTMvaGNmLzEwNzAxODQ4NDEyMTkwLmpwZ3wxOTY2Mjc1MzYxZTQ0MTA3Y2VmYmZmZmJmZGQ4NzAzMGVmYTVhNTU4YjE5MDI0NjcxOWMyYmNhZmNiOTc3NWRl">
-            </div>
-            <div class="prod_text">
-              <h5><b>TV SAMSUNG 50" Pulgadas 127 cm UN50AU9000KXZL 4K-UHD LED Plano Smart TV</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+  <!-- Producto 1 -->
+  <ion-card >
+    <img src="https://www.alkosto.com/medias/8806092056091-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w0NDU5NHxpbWFnZS9qcGVnfGltYWdlcy9oNzYvaGMxLzEwNzU1MjEzMTMxODA2LmpwZ3xkZDRkOTZiZjI1YWI2Njc1ZGFhOTdhOTYxMDA3OTZhZmQwZTVlNzQyYjFkOGQ4YjU0YjQwNzBkMTg1YWExYjdm" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>TV LG 43" Pulgadas 108 cm 43UP7750 4K-UHD LED Plano Smart TV</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div></div>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$838.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/8806091235299-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w0MjI1OXxpbWFnZS9qcGVnfGltYWdlcy9oMzUvaDNlLzEwNjgzOTIzMzAwMzgyLmpwZ3w5ZDk1Y2MzNzY5MTljMTk2NzExMzgxZjAyOTllMTcyMGUyZjdiNDBkNmQyYjViMDNlMmJiMjQ1OGQyMjdiNTNi">
-            </div>
-            <div class="prod_text">
-              <h5><b>
-                TV SAMSUNG 75" Pulgadas 190.5 cm 75AU8000 4K-UHD LED Plano Smart TV </b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+  <!-- Producto 2 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/8806092040595-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w0Mjg5MnxpbWFnZS9qcGVnfGltYWdlcy9oMTMvaGNmLzEwNzAxODQ4NDEyMTkwLmpwZ3wxOTY2Mjc1MzYxZTQ0MTA3Y2VmYmZmZmJmZGQ4NzAzMGVmYTVhNTU4YjE5MDI0NjcxOWMyYmNhZmNiOTc3NWRl" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>TV SAMSUNG 50" Pulgadas 127 cm UN50AU9000KXZL 4K-UHD LED Plano Smart TV</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio"><p>$949.900</p></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/8806091235565-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxMDQxMjB8aW1hZ2UvanBlZ3xpbWFnZXMvaGE4L2hjZi8xMDYxNzAyMzU2MTc1OC5qcGd8ZDk2NWJjYzM4Y2I5ODQ1ZjdhNDhjN2Q4ODg0YzUzZjJhODdlNmRjNGVlMmJlMzRmZWM4Njg0Y2VlYTBkMDA0Nw">
-            </div>
-            <div class="prod_text">
-              <h5><b>TV LG 43" Pulgadas 108 cm 43UP7750 4K-UHD LED Plano Smart TV</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+  <!-- Producto 3 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/8806091235299-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w0MjI1OXxpbWFnZS9qcGVnfGltYWdlcy9oMzUvaDNlLzEwNjgzOTIzMzAwMzgyLmpwZ3w5ZDk1Y2MzNzY5MTljMTk2NzExMzgxZjAyOTllMTcyMGUyZjdiNDBkNmQyYjViMDNlMmJiMjQ1OGQyMjdiNTNi" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b> TV SAMSUNG 75" Pulgadas 190.5 cm 75AU8000 4K-UHD LED Plano Smart TV </b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$1.050.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/6921732873219-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w1OTk0M3xpbWFnZS9qcGVnfGltYWdlcy9oMDQvaGIzLzEwNjIxMTI0OTM1NzEwLmpwZ3w4YjdmM2EyYzkzMzgzNWI5Y2I5OGRmOWMxMjRkOTRiZDE1NzdhN2ZkNmZjNmIyNjAyOTFhZDcwZGIwYzY0NDQz">
-            </div>
-            <div class="prod_text">
-              <h5><b>TV LG 50" Pulgadas 126 cm 50NANO80 4K-UHD NANOCELL LED Plano Smart TV</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
-        </div>
-      </ion-card-content>
-    </ion-card>
-  </div>
+  <!-- Producto 4 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/8806091235565-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxMDQxMjB8aW1hZ2UvanBlZ3xpbWFnZXMvaGE4L2hjZi8xMDYxNzAyMzU2MTc1OC5qcGd8ZDk2NWJjYzM4Y2I5ODQ1ZjdhNDhjN2Q4ODg0YzUzZjJhODdlNmRjNGVlMmJlMzRmZWM4Njg0Y2VlYTBkMDA0Nw" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>TV LG 43" Pulgadas 108 cm 43UP7750 4K-UHD LED Plano Smart TV</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$1.199.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 5 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/6921732873219-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w1OTk0M3xpbWFnZS9qcGVnfGltYWdlcy9oMDQvaGIzLzEwNjIxMTI0OTM1NzEwLmpwZ3w4YjdmM2EyYzkzMzgzNWI5Y2I5OGRmOWMxMjRkOTRiZDE1NzdhN2ZkNmZjNmIyNjAyOTFhZDcwZGIwYzY0NDQz" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>TV LG 50" Pulgadas 126 cm 50NANO80 4K-UHD NANOCELL LED Plano Smart TV</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$719.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

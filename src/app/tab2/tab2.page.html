@@ -1,0 +1,130 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Genu's App</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Nombre del Cliente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/tabs">Inicio</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag-remove"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/promociones">Promociones</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/cuenta">Cuenta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit"></ion-icon>
+        <ion-label class="texto-menu">Salir</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-list-header>
+      <b>Nuestros Productos</b>
+    </ion-list-header>
+
+    <!-- Categoria 1 -->
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCwA2OKtHbiL2oEiAPai5qnRqU3L2E2RS-g&usqp=CAU">
+      </ion-avatar>
+      <ion-label routerLink="/celulares">
+        <h2 class="categoria">Celulares</h2>
+      </ion-label>
+    </ion-item>
+
+    <!-- Categoria 2 -->
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://www.alkosto.com/medias/estufa.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQwNTh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYmIvaGY5LzEwMzMzMjI3NDE3NjMwLnN2Z3xkMTAzYWUyYzAxOWNjZDc3MWFiYTVjNGUxNmZkY2E5NTdhMDFjNTc4Yzg1OWEzZDYxNmU4YWQxMjE3Y2NlZTk5">
+      </ion-avatar>
+      <ion-label routerLink="/estufas">
+        <h2 class="categoria">Estufas</h2>
+      </ion-label>
+    </ion-item>
+
+    <!-- Categoria 3 -->
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://www.alkosto.com/medias/icon-freidora-aire.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMxMzh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNjMvaGJkLzEwMzY1NTg1MzkxNjQ2LnN2Z3w1OWJkZDk0ZWU0ZDA0NTI5NTg1NmI3NjkzY2YwN2ZjYWQ5OTg2ZTY1MmM0ZmU4YWU1Yjg4YzM2MmY2Yjg5NWUy">
+      </ion-avatar>
+      <ion-label routerLink="/freidora">
+        <h2 class="categoria">Freidoras</h2>
+      </ion-label>
+    </ion-item>
+
+    <!-- Categoria 4 -->
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://www.alkosto.com/electrodomesticos/grandes-electrodomesticos/refrigeracion/c/medias/icon-nevera.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE1MzR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMDgvaDI5LzEwMzMzMjYzNjU5MDM4LnN2Z3wwZWVhNjBlY2I2ZWM4MTVmYTA3MzE2MWEwZmUwYTc3NTJmNjM5OWFiZmUxYzk3M2MwZGM4NmVmZGVmNDE0ZmYy">
+      </ion-avatar>
+      <ion-label routerLink="/neveras">
+        <h2 class="categoria">Neveras</h2>
+      </ion-label>
+    </ion-item>
+
+    <!-- Categoria 5 -->
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://www.alkosto.com/medias/icon-horno-microondas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQyMjR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNmUvaDFhLzEwMzY1NTkzMzIxNTAyLnN2Z3xjOWMyNmVkMzExYTg2MDY1ZmQyNzg4NDM3MmJiYTE4MzQyZDFlNThkYTdhMzk5YTdjYzM3NDcxZDJmYzRmODI3">
+      </ion-avatar>
+      <ion-label routerLink="/hornos">
+        <h2 class="categoria">Hornos Microondas</h2>
+      </ion-label>
+    </ion-item>
+
+    <!-- Categoria 6 -->
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://www.alkosto.com/medias/lavadora.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIxODB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMzcvaGJjLzEwMzMzMjU1MDA4Mjg2LnN2Z3w0NjViYWM0ODcwZjk5YzZiYTJiOTRkMTUxNDUzZmRhNmFjNWE1ZTUzNjI0MzQyNDhkY2E4M2YzZjdkMTViMTQ4">
+      </ion-avatar>
+      <ion-label routerLink="/lavadoras">
+        <h2 class="categoria">Lavadoras</h2>
+      </ion-label>
+    </ion-item>
+
+    <!-- Categoria 7 -->
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://icons555.com/images/icons-orange/image_icon_fan_pic_512x512.png">
+      </ion-avatar>
+      <ion-label routerLink="/ventiladores">
+        <h2 class="categoria">Ventiladores</h2>
+      </ion-label>
+    </ion-item>
+
+    <!-- Categoria 8 -->
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://us.123rf.com/450wm/deimosz/deimosz1412/deimosz141200378/35812149-naranja-icono-en-el-mapa-pointer-con-televisi%C3%B3n-tv-tienda-de-electr%C3%B3nica-o-electr%C3%B3nica-de-la-muestra.jpg?ver=6">
+      </ion-avatar>
+      <ion-label routerLink="/televisores">
+        <h2 class="categoria">Televisores</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->

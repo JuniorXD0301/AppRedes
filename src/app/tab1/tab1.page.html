@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Genu's App</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Nombre del Cliente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/tabs">Inicio</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag-remove"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/promociones">Promociones</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/cuenta">Cuenta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit"></ion-icon>
+        <ion-label class="texto-menu">Salir</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-content [fullscreen]="true">
+
+  <ion-slides>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/genus.png"/>
+        <h4 class="titulo"><b>Bienvenido</b></h4>
+        <p>Esto es la<b> App Genu's</b> , la aplicacion en la cual puedes encontrar toda clase de tecnologia, al alcance de la mano.</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/logo.png"/>
+        <h4 class="titulo"><b>¿Qué es Genu's App?</b></h4>
+        <p><b>Genu's App</b> es una empresa de electronicos, caracterizada por su gran calidad, economia y rendimiento.</p>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
+
+<!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->

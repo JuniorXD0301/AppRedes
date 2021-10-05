@@ -1,0 +1,195 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Genu's App</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Nombre del Cliente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/tabs">Inicio</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag-remove"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/promociones">Promociones</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/cuenta">Cuenta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit"></ion-icon>
+        <ion-label class="texto-menu">Salir</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-content>
+
+   <!-- Seccion de las slides -->
+   <ion-slides>
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/E1.jpg"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/E2.jpg"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/E3.jpg"/>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- Seccion de prodcutos destacados -->
+  <ion-item>
+    <ion-label class="productos-destacados"><b>Freidoras</b></ion-label>
+  </ion-item>
+
+  <!-- Producto 1 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/050875827837-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wzNDY1MnxpbWFnZS9qcGVnfGltYWdlcy9oMDEvaDFkLzEwODA0ODc4ODY4NTEwLmpwZ3w4YmYwYjRjYzIyM2MzNTQyNzI1ODM4OWQ5MTNmMjkyMzQxMDZlOTQ0MzFjYWRmNDkyOWFmODc5ZTY1MGIwOTUy" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Freidora de Aire Saludable BLACK+AND DECKER HF3003B Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div></div>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$257.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 2 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/3045380020665-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wyODc2MnxpbWFnZS9qcGVnfGltYWdlcy9oMTEvaDljLzEwODA1NjU4Mzg2NDYyLmpwZ3wwYTBkN2VjOWNlODc1ZjU5NTJlMzgzZmE1NTNhNzVkMmVmMGY3Yzg2ZGE1MDI2ZmE5NWI0YTIzZTY3YTAyZGJm" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Freidora de Aire IMUSA Air Fryer Esencial 3,2 Litros Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio"><p>$229.900</p></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 3 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/622356554572-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wyMTIyNnxpbWFnZS9qcGVnfGltYWdlcy9oYjkvaDQ0LzEwNzAyNjEwMzY2NDk0LmpwZ3xhMzY5NWM3Nzg5MGMyOWU5NWZlMzg1MDBmMDkxMDhjZjk1NjNlNDZlYTJkMjMyMWMwOGU2MDJiYjQ1YjIyNzE3" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Freidora de Aire NINJA 3,7 Litros AF101 Gris</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$359.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 4 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/3045380017528-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w0Nzg4NXxpbWFnZS9qcGVnfGltYWdlcy9oZGMvaDFlLzEwNzA1OTE5NTA4NTEwLmpwZ3w3NGU1NGQ3Njc3YTRkMzRlNmQ0YTZhMWYyNjA5YzRiOWYxMTFjODNjODg5ZTk3NWRlNWI3OWU0OWFlNzYzNTlm" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Freidora de Aire IMUSA Easy Fry Deluxe Digital 1510001752 Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$389.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 5 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/7705946460118-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wzOTY5MnxpbWFnZS9qcGVnfGltYWdlcy9oNGEvaGQwLzEwNTI5NzE4MTczNzI2LmpwZ3xlOWY4Mjg0NTEzNjBlM2ViNzY0MmVkNjljZGE3OTFjYjZjMjE5M2I4MGY5MWVkNmZlZGI0NTk5ODdmMTFiYWZi" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Freidora de Aire KALLEY K-MAF25 Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$199.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+

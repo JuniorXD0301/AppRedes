@@ -1,78 +1,195 @@
-<ion-header>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Genu's App</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Nombre del Cliente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/tabs">Inicio</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag-remove"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/promociones">Promociones</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/cuenta">Cuenta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit"></ion-icon>
+        <ion-label class="texto-menu">Salir</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
 <ion-content>
-  <div class="contenedor">
-    <ion-card> <ion-card-header>
-      <div class="encabezado">
-        <ion-card-title>Lavadoras</ion-card-title>
-        <a href="http://localhost:8100/products"><ion-icon name="arrow-back-outline"></ion-icon></a>
+
+   <!-- Seccion de las slides -->
+   <ion-slides>
+    <ion-slide>
+      <div class="slide">
+        <img src="https://www.lg.com/cac/images/lavadoras-y-secadoras/md06041956/gallery/1100_01_v.jpg"/>
       </div>
-    </ion-card-header>
+    </ion-slide>
 
+    <ion-slide>
+      <div class="slide">
+        <img src="https://www.lg.com/co/images/lavadoras-y-secadoras/md07512821/gallery/D-01.jpg"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="https://www.lg.com/cl/images/lavadoras/md06214176/gallery/1100_1.jpg"/>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- Seccion de prodcutos destacados -->
+  <ion-item>
+    <ion-label class="productos-destacados"><b>Lavadoras</b></ion-label>
+  </ion-item>
+
+  
+  <!-- Producto 1 -->
+  <ion-card >
+    <img src="https://electrojaponesa.vteximg.com.br/arquivos/ids/182322-1000-1000/WA13T5260BY--7-.png?v=637344947410100000" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Lavadora - Samsung</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div></div>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$838.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 2 -->
+  <ion-card>
+    <img src="https://www.kalley.com.co/medias/7705946374064-001-750Wx750H?context=bWFzdGVyfGltYWdlc3wxOTg3N3xpbWFnZS9qcGVnfGltYWdlcy9oNWQvaDhmLzkwMzgyOTYwODg2MDYuanBnfGUyZjRiM2FiZTFiMzViNzI5NzQxZmQ1NTU4NWEyMWZlOTYwY2RjYjAwMjhiZjkwOTg4NmFjYmY5NTg2NTViNTU" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Lavadora - Kalley</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio"><p>$949.900</p></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+    <!-- Producto 3 -->
+    <ion-card>
+      <img src="https://www.tiendamabe.com.co/medias/Mabe-Lavadoras-24kg-DiamondGray-LMC74201WDAB-Frente.jpg-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxNjAyMjJ8aW1hZ2UvanBlZ3xoNzUvaDEyLzkzODgzNDc4ODM1NTAvTWFiZV9MYXZhZG9yYXNfMjRrZ19EaWFtb25kR3JheV9MTUM3NDIwMVdEQUJfRnJlbnRlLmpwZ18xMjAwV3gxMjAwSHxjNzE2MDA5NTlhYjU1ZjgyYmJjNDdmZWYzNWVhMTA3YjNlNzYxZDNiNWQyM2QxNzQyZjA1NDVhMGJiZDgyZTJl" />
       <ion-card-content>
-        <div class="productos">
-
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/8806091259424-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxOTU2M3xpbWFnZS9qcGVnfGltYWdlcy9oMDIvaDA4LzEwNDE5MDI2ODg2Njg2LmpwZ3xhMmZmNjg3ZjhkMGQ5NDA3NmI4ZmRmNmE1N2EzODc5NTJiNjdlNWJhODNlYjk5MzU2YzJhNDk1ZjM0MjkyYmZl">
-            </div>
-            <div class="prod_text">
-              <h5><b>Lavadora - Samsung</b></h5>
-              <p>Precio - $ 1.100.000</p>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
-
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/7501545635847-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxMTUwOHxpbWFnZS9qcGVnfGltYWdlcy9oOTkvaGViLzkzODYyNTA1MDIxNzQuanBnfDEwMjQ5YTE2MWM3YjJmMGE1ZjNiYWI5ODM0MzQyODc2YWU3YTM1MjI5MTMzOTg4MTMxYjIyZjA5OWI5YjYxMGM">
-            </div>
-            <div class="prod_text">
-              <h5><b>Lavadora - Kalley</b></h5>
-              <p>Precio - $ 1.200.000</p>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
-
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/8801643989378-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wzODQwNXxpbWFnZS9qcGVnfGltYWdlcy9oZjAvaDhkLzEwMzcwNDgwMDc4ODc4LmpwZ3wwNTVmZTU2YTBlZjhkYjRiMGFiNzA2MjQ4MDI5YmZmNzA0NDE4MTU1YWIzMjBmZjkxZjE3MjQzYTc0MWQ1YjBl">
-            </div>
-            <div class="prod_text">
-              <h5><b>Lavadora - Mabe</b></h5>
-              <p>Precio - $ 900.000</p>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
-
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/7501545635847-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxMTUwOHxpbWFnZS9qcGVnfGltYWdlcy9oOTkvaGViLzkzODYyNTA1MDIxNzQuanBnfDEwMjQ5YTE2MWM3YjJmMGE1ZjNiYWI5ODM0MzQyODc2YWU3YTM1MjI5MTMzOTg4MTMxYjIyZjA5OWI5YjYxMGM">
-            </div>
-            <div class="prod_text">
-              <h5><b>Lavadora - Whirlpool</b></h5>
-            
-              <p>Precio - $ 1.500.000</p>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
-
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/8806098364510-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wzNDQxOXxpbWFnZS9qcGVnfGltYWdlcy9oM2UvaGNkLzEwMzcwNDgxMjU4NTI2LmpwZ3wyMDEwNzdjNzc2YTYxOTljZGYyNmIxMWY2YjZjNjYyMDdiMTFhZWY5ZDYyNmUzZmIxZWNlZjNlYWQzYzZhNWQy">
-            </div>
-            <div class="prod_text">
-              <h5><b>Lavadora - LG</b></h5>
-              <p>Precio - $ 1.000.000</p>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
-
-
-        </div>
-          
+        <ion-grid color="primary">
+          <ion-row>
+            <ion-col>
+              <div><b>Lavadora - Mabe</b></div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-align-items-center">
+            <ion-col>
+              <ion-buttons>
+                <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+              </ion-buttons>
+            </ion-col>
+            <ion-col>
+              <div class="div-precio">$1350.900</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>              
       </ion-card-content>
     </ion-card>
-  </div>
+
+   <!-- Producto 4 -->
+   <ion-card>
+    <img src="https://www.alkosto.com/medias/7709444304127-003-750Wx750H?context=bWFzdGVyfGltYWdlc3wxMTY0NjZ8aW1hZ2UvanBlZ3xpbWFnZXMvaDJkL2gzZC85MTMxNjgzNzQxNzI2LmpwZ3xlYjE2ZmFiOTVmNDNiNmRjZDNhMWFkZGNjNjdkOTI4NDM4MWQxOTU3NzY0YjRjOTA1OGYyZWRhYjdmOTZhYjZi" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Lavadora - Whirlpool</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$999.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 5 -->
+  <ion-card>
+    <img src="data:image/jpeg;base64,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" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Lavadora - LG</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$719.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

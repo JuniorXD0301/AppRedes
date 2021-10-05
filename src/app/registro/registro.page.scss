@@ -1,0 +1,29 @@
+ion-content {
+    --ion-background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ion-card {
+    background: transparent;
+    box-shadow: none;
+    text-align: center;
+    margin-top: 50px;
+    ion-card-title {
+        color: #242020;
+        font-size: 30px;
+        font-weight: 400;
+    }
+    ion-card-subtitle {
+        color: #242020;
+        font-size: 14px;
+    }
+}
+
+ion-button {
+    margin-top: 20px;
+}
+
+
+.contra {
+    margin-bottom: 15px;
+}

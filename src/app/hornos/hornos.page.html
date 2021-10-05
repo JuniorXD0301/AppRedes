@@ -1,0 +1,195 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Genu's App</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Nombre del Cliente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/tabs">Inicio</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag-remove"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/promociones">Promociones</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/cuenta">Cuenta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit"></ion-icon>
+        <ion-label class="texto-menu">Salir</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-content>
+
+  <!-- Seccion de las slides -->
+  <ion-slides>
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/C1.jpg"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/C2.jpg"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/C3.jpg"/>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- Seccion de prodcutos destacados -->
+  <ion-item>
+    <ion-label class="productos-destacados"><b>Hornos Microondas</b></ion-label>
+  </ion-item>
+
+  <!-- Producto 1 -->
+  <ion-card >
+    <img src="https://osterco.vteximg.com.br/arquivos/ids/160159-1000-1000/TSSTTVDAF1-1.jpg?v=637365794518000000" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Horno Tostador OSTER 0.7 TSSTTVDAF1 Digita y Freidora de aire Plateado</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div></div>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$238.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 2 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/050875815254-001-750Wx750H?context=bWFzdGVyfGltYWdlc3w0MjI4MHxpbWFnZS9qcGVnfGltYWdlcy9oMGQvaDYzLzg4MTQwODgxMjY0OTQuanBnfGI0ZGY1MzY3OWU1MmUwOGQxMzNmNDc1MGNjZmFhNDg0MGIxNTljZTRjYzI4YzBiZmMyYTM1Y2FhNjIzMWQ5MTc" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Horno Tostador BLACK+DECKER 0.7 TO3260XSBD Plateado</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio"><p>$749.900</p></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 3 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/040094311040-001-750Wx750H?context=bWFzdGVyfGltYWdlc3wyMDI0NzB8aW1hZ2UvanBlZ3xpbWFnZXMvaGE5L2hiMS8xMDQ2OTY2OTc2NTE1MC5qcGd8NzZiNGM1YTJkMWI1MDI1ZDUxMmNlYzI0NTg0MWYxOGJlODg2ODc0N2FlNjNjMjY3OGQwMWZkYTFlZjhlNDcxZg" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Horno Tostador HAMILTON BEACH 8.0 31104D Gris</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$350.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 4 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/3016661154409-001-750Wx750H?context=bWFzdGVyfGltYWdlc3wxNjYyOTR8aW1hZ2UvanBlZ3xpbWFnZXMvaDE3L2gzZS85MTI3NTE2OTk1NjE0LmpwZ3w2ZWE1MjgzNDg1YmFiOTIzMDJkY2I0ZTQyZDRmZWUyM2UyMDhlZTc4ZjU0ZGExMDRmOTliMTE5ODZhNDc2OTcx" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Horno Tostador IMUSA 2.2 8010000504 5en1 Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$499.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 5 -->
+  <ion-card>
+    <img src="https://www.kalley.com.co/medias/7701023041720-001-750Wx750H?context=bWFzdGVyfGltYWdlc3wyNjUzOXxpbWFnZS9qcGVnfGltYWdlcy9oNDYvaDVkLzg5MDEyMjAzMzU2NDYuanBnfDM0NjdmYjQ4ZGJiNDA3MjIzZTA5YWE4MmY2ZWU5MjkxMmUzZmEyNTdmZDViNTJjOTQ0NWI2ZDc1YmQyNzViN2M" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Horno Tostador KALLEY 0.3 K-MHE8009N01 Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$519.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+

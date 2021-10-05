@@ -1,72 +1,194 @@
-<ion-header>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Genu's App</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Nombre del Cliente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/tabs">Inicio</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag-remove"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/promociones">Promociones</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/cuenta">Cuenta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit"></ion-icon>
+        <ion-label class="texto-menu">Salir</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
 <ion-content>
-  <div class="contenedor">
-    <ion-card> <ion-card-header>
-      <div class="encabezado">
-        <ion-card-title>Neveras</ion-card-title>
-        <a href="http://localhost:8100/products"><ion-icon name="arrow-back-outline"></ion-icon></a>
+
+   <!-- Seccion de las slides -->
+   <ion-slides>
+    <ion-slide>
+      <div class="slide">
+        <img src="https://olimpica.vtexassets.com/arquivos/ids/198110-800-450?width=800&height=450&aspect=true"/>
       </div>
-    </ion-card-header>
+    </ion-slide>
 
-      <ion-card-content>
-        <div class="productos">
+    <ion-slide>
+      <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-tQvinsSDo6Dhzmw-Sk-dUK1TvYoP3mcZ7BRD9DTHEBznDKa-QhKkM_j8jc2o-zbMYJw&usqp=CAU"/>
+      </div>
+    </ion-slide>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/7704353378405-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxODY2MHxpbWFnZS9qcGVnfGltYWdlcy9oNTIvaDNmLzk3NzQ5MDY0MDg5OTAuanBnfDI0Yzk3MGM2YTcxMDJkZWUyYzgzY2EzYThkMWM5ODUyMjA2MmQ0MTk2ZTBjNGYxNzk4ZWRjZTllMmZjNDNlNTg">
-            </div>
-            <div class="prod_text">
-              <h5><b>Nevera HACEB No Frost Congelador Superior 404 Litros Brutos Antártica Gris</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+    <ion-slide>
+      <div class="slide">
+        <img src="https://olimpica.vtexassets.com/arquivos/ids/210204-800-450?width=800&height=450&aspect=true"/>
+      </div>
+    </ion-slide>
+  </ion-slides>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/8806092127500-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxNjIxOXxpbWFnZS9qcGVnfGltYWdlcy9oZWMvaDczLzEwNjI2MTM3NTU0OTc0LmpwZ3wyNmU3YzA5ZTU4MDVmNWQ4ZmEyYzk5MDQ1YjQzOTlhMTYwZGU4ZWQyMzQ0YzU0MGFhNzQ3YmMzNDU2MTA4YmE5">
-            </div>
-            <div class="prod_text">
-              <h5><b>Nevera SAMSUNG No Frost Congelador Superior 243 Litros Brutos RT22FARADS8 Gris</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+  <!-- Seccion de prodcutos destacados -->
+  <ion-item>
+    <ion-label class="productos-destacados"><b>Neveras</b></ion-label>
+  </ion-item>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/7704353418842-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wyNjY0MHxpbWFnZS9qcGVnfGltYWdlcy9oYTgvaGUzLzEwMDQ2NzMxNDg1MjE0LmpwZ3xlYzNkOGRiMmMxY2E4MDhmZWJhMDcwMmJiMGIyNTE3MDYwZDJkYzYzZWE3ZDM0YzI1ZTZkZGIwYjU1ZDA0Y2Uz">
-            </div>
-            <div class="prod_text">
-              <h5><b>Nevera HACEB No Frost Congelador Superior 294 Litros Brutos SIBERIA Manija Integrada Titanio</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+  <!-- Producto 1 -->
+  <ion-card >
+    <img src="https://www.alkosto.com/medias/7704353378405-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxODY2MHxpbWFnZS9qcGVnfGltYWdlcy9oNTIvaDNmLzk3NzQ5MDY0MDg5OTAuanBnfDI0Yzk3MGM2YTcxMDJkZWUyYzgzY2EzYThkMWM5ODUyMjA2MmQ0MTk2ZTBjNGYxNzk4ZWRjZTllMmZjNDNlNTg" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Nevera HACEB No Frost Congelador Superior 404 Litros Brutos Antártica Gris</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div></div>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$938.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/8801643911584-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxNDQxNHxpbWFnZS9qcGVnfGltYWdlcy9oN2IvaDAyLzEwMzcyMjczNjY4MTI2LmpwZ3wyODYxMzJkN2QyMGM2OGFiNGFlYzg0YmFlMGIwODBlZTcwZjMzMDc1ZmJjNzc0YTlkYWQ0N2RjMzc0MDJmZTQz">
-            </div>
-            <div class="prod_text">
-              <h5><b>Nevera SAMSUNG No Frost Congelador Inferior 313 Litros Brutos RB30N4160S8 Gris</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+  <!-- Producto 2 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/8806092127500-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxNjIxOXxpbWFnZS9qcGVnfGltYWdlcy9oZWMvaDczLzEwNjI2MTM3NTU0OTc0LmpwZ3wyNmU3YzA5ZTU4MDVmNWQ4ZmEyYzk5MDQ1YjQzOTlhMTYwZGU4ZWQyMzQ0YzU0MGFhNzQ3YmMzNDU2MTA4YmE5" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Nevera SAMSUNG No Frost Congelador Superior 243 Litros Brutos RT22FARADS8 Gris</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio"><p>$949.900</p></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/7704353362589-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wyMDg0OHxpbWFnZS9qcGVnfGltYWdlcy9oNmUvaDY4LzEwMzcwMTY1NjA0MzgyLmpwZ3wxMTZiNDIwMGM5NTdkNmRjYTJiNWJiZGRlYjc2Y2JjMmM4NGNmNjYwOGE3ZGU0MGVmNTkzZmY1M2I1NzYwYjYx">
-            </div>
-            <div class="prod_text">
-              <h5><b>Nevera WHIRLPOOL No Frost Congelador Superior 440 Litros Brutos WRW45AKTWW Gris</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+  <!-- Producto 3 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/7704353418842-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wyNjY0MHxpbWFnZS9qcGVnfGltYWdlcy9oYTgvaGUzLzEwMDQ2NzMxNDg1MjE0LmpwZ3xlYzNkOGRiMmMxY2E4MDhmZWJhMDcwMmJiMGIyNTE3MDYwZDJkYzYzZWE3ZDM0YzI1ZTZkZGIwYjU1ZDA0Y2Uz" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Nevera HACEB No Frost Congelador Superior 294 Litros Brutos SIBERIA Manija Integrada Titanio</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$1.350.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
 
+  <!-- Producto 4 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/8801643911584-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxNDQxNHxpbWFnZS9qcGVnfGltYWdlcy9oN2IvaDAyLzEwMzcyMjczNjY4MTI2LmpwZ3wyODYxMzJkN2QyMGM2OGFiNGFlYzg0YmFlMGIwODBlZTcwZjMzMDc1ZmJjNzc0YTlkYWQ0N2RjMzc0MDJmZTQz" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Nevera SAMSUNG No Frost Congelador Inferior 313 Litros Brutos RB30N4160S8 Gris</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$1.499.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
 
-        </div>
-          
-      </ion-card-content>
-    </ion-card>
-  </div>
+  <!-- Producto 5 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/7704353362589-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wyMDg0OHxpbWFnZS9qcGVnfGltYWdlcy9oNmUvaDY4LzEwMzcwMTY1NjA0MzgyLmpwZ3wxMTZiNDIwMGM5NTdkNmRjYTJiNWJiZGRlYjc2Y2JjMmM4NGNmNjYwOGE3ZGU0MGVmNTkzZmY1M2I1NzYwYjYx" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Nevera WHIRLPOOL No Frost Congelador Superior 440 Litros Brutos WRW45AKTWW Gris</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$919.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

@@ -1,0 +1,194 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Genu's App</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Nombre del Cliente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/tabs">Inicio</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag-remove"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/promociones">Promociones</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person"></ion-icon>
+        <ion-label class="texto-menu">Cuenta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit"></ion-icon>
+        <ion-label class="texto-menu">Salir</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-content>
+
+   <!-- Seccion de las slides -->
+   <ion-slides>
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/E1.jpg"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/E2.jpg"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/E3.jpg"/>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- Seccion de prodcutos destacados -->
+  <ion-item>
+    <ion-label class="productos-destacados"><b>Ventiladores</b></ion-label>
+  </ion-item>
+
+  <!-- Producto 1 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/7702073347800-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wzMTA3NHxpbWFnZS9qcGVnfGltYWdlcy9oYjUvaGJlLzEwNDkyMTQzMzM3NTAyLmpwZ3w3YWFkMTNlMmMyZWYzYjRiM2IyMzczN2MzNDFkM2JiZTYzMjY3ZThhMzMxNTI5NmY2NjY4MjI1NDMyMGJlMjI1" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Ventilador 2 en 1 SAMURAI Ultra Silence Force Control Remoto Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div></div>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$264.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 2 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/7702073347404-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wyMzYwOHxpbWFnZS9qcGVnfGltYWdlcy9oZWIvaDczLzEwNDgzNzkzMzYyOTc0LmpwZ3xmYTU3YTM3ZDI2ZjhhOWM3NzJiODMwYjU3MWY1NWE0MWY2MzA1MGJjMzZhNzU3ZGRkZjczZWEzNTIyZGZiZDA1" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Ventilador 2 en 1 SAMURAI Ultra Silence Force Blanco</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio"><p>$189.900</p></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 3 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/7702073314208-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w5MzAyMHxpbWFnZS9wbmd8aW1hZ2VzL2gyNi9oZDEvOTExNzYwNzI2NDI4Ni5wbmd8N2E0NWRlMTM2ODA1MTA5Y2ViMjhhNGJlMzcxNzhmODAxZjA4ZGJlYmM5NGYzZTM3NDZkMzRlNzNiODhhYWNiMw" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Ventilador de Pared SAMURAI Airprotec Maxx 2en1 Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$124.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 4 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/7702073314109-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wyMzUxNHxpbWFnZS9qcGVnfGltYWdlcy9oM2MvaDJmLzEwNjkzMzU1NDA1MzQyLmpwZ3xhNWFmN2ExMzYyN2FjZWNhMmY2MTY5OWMxOWJiZGI2NDg1NWQyYjI5YTVkMGUyMzY1YWVlZGI1MzgzZTQ3YzY5" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Ventilador 2 en 1 SAMURAI AirProtec MAXX Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$139.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 5 -->
+  <ion-card>
+    <img src="https://www.alkosto.com/medias/7705946307406-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w1Mzg3N3xpbWFnZS9qcGVnfGltYWdlcy9oNGMvaDgyLzEwNTI5NzI2NDk2Nzk4LmpwZ3w4MGU0MmY0MTFkYmE4MDA1MTRiYWZjYmM3NWNjZjJhZWViMjg3N2UxZDBiZjBkNDJlYjg1OTFjNmJlYzY4Yzc4" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Ventilador 3 en 1 KALLEY K-V31N02 Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$171.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

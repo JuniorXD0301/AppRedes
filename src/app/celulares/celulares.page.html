@@ -1,70 +1,194 @@
-<ion-header>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Genu's App</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Nombre del Cliente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/tabs">Inicio</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bag-remove"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/promociones">Promociones</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person"></ion-icon>
+        <ion-label class="texto-menu" routerLink="/cuenta">Cuenta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="exit"></ion-icon>
+        <ion-label class="texto-menu">Salir</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
 <ion-content>
-  <div class="contenedor">
-    <ion-card>
-      <ion-card-header>
-        <div class="encabezado">
-          <ion-card-title>Celulares</ion-card-title>
-          <a href="http://localhost:8100/products"><ion-icon name="arrow-back-outline"></ion-icon></a>
-        </div>
-      </ion-card-header>
 
-      <ion-card-content>
-        <div class="productos">
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/194252145678-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wzNzc4MHxpbWFnZS9qcGVnfGltYWdlcy9oZmMvaGY1LzEwMDU2Njg1OTEyMDk0LmpwZ3wzYTUzN2EzZjBiMjE1OGZmNjJkYmZjYTY5OTViM2IxMDQ5YzNhNTkyYTk5Y2U1YWU4MzAyMWVlZjg1MDE3OTM2">
-            </div>
-            <div class="prod_text">
-              <h5><b>Celular MOTOROLA One Fusion 128GB Verde - Dark Esmerald</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+   <!-- Seccion de las slides -->
+   <ion-slides>
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/C1.jpg"/>
+      </div>
+    </ion-slide>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/840023208546-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wyNjY3NHxpbWFnZS9qcGVnfGltYWdlcy9oMzQvaDNkLzk3NjcyMTQ4NzQ2NTQuanBnfGNhNGFhMmEzZDY5YWI2N2I3NDIyMjY0MzNhZmRkY2Y2NWVhN2I0M2VlNzI3NmRmMTcyNzNmM2FmNTY5ZTA1Mjg">
-            </div>
-            <div class="prod_text">
-              <h5><b>Celular SAMSUNG Galaxy A02 64GB Azul</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/C2.jpg"/>
+      </div>
+    </ion-slide>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/8806092141292-001-310Wx310H?context=bWFzdGVyfGltYWdlc3w0ODA3MnxpbWFnZS9qcGVnfGltYWdlcy9oM2IvaGE5LzEwNjY2NDg1MTg2NTkwLmpwZ3wzNzU5YmI4ZWY5MzA2NmRkOWJkMWEyZTRiMTZjNmZlYzRiYzhlNDVhNDBkNGVjNmYzMzY1MDFjZjM4NDQzYWEx">
-            </div>
-            <div class="prod_text">
-              <h5><b>
-                Celular XIAOMI REDMI 9 64GB Gris - Carbon Grey</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/img/C3.jpg"/>
+      </div>
+    </ion-slide>
+  </ion-slides>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/6941059645900-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wyNjg3MXxpbWFnZS9qcGVnfGltYWdlcy9oNWMvaGViLzk3MTU5OTU4NjkyMTQuanBnfDE0YjEwNmM2ZWNmMWIwYmFjYzAwNWJjZDkzYTJmZmU4MzAwYmYyMjE0OTUyNTY3NGQ2MzhmNTM1YTdiZGUyMTc">
-            </div>
-            <div class="prod_text">
-              <h5><b>Celular MOTOROLA G20 64GB Azul</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
+  <!-- Seccion de prodcutos destacados -->
+  <ion-item>
+    <ion-label class="productos-destacados"><b>Telefonos Celulares</b></ion-label>
+  </ion-item>
 
-          <div class="cont_prod">
-            <div class="producto">
-              <img src="https://www.alkosto.com/medias/840023215414-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wzNjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oOWMvaDA0LzEwNTUyODAwMTQ5NTM0LmpwZ3w3YmEzNGI1ZTE1ZWJlYTYxMTRlODE0Y2UzYzJmMmI0ZDAxZjg2NGNkNzJhM2IzMTkyMTgzYWJiNzI2MzJjYzFh">
-            </div>
-            <div class="prod_text">
-              <h5><b>Celular TCL 10L 128GB + 6GB Azul</b></h5>
-              <ion-button color="dark">Agregar</ion-button>
-            </div>
-          </div>
-        </div>
-      </ion-card-content>
-    </ion-card>
-  </div>
+  <!-- Producto 1 -->
+  <ion-card>
+    <img src="../../assets/img/c1.png" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Celular SAMSUNG Galaxy A02 64GB Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div></div>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$449.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 2 -->
+  <ion-card>
+    <img src="../../assets/img/c2.png" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Celular Motorola G320 128GB Gris</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio"><p>$749.900</p></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 3 -->
+  <ion-card>
+    <img src="../../assets/img/c3.png" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Celular XIAOMI REDMI 9 64GB Gris</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$549.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 4 -->
+  <ion-card>
+    <img src="../../assets/img/c4.png" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>iPhone XR 128GB Negro</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$2.499.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Producto 5 -->
+  <ion-card>
+    <img src="../../assets/img/c5.png" />
+    <ion-card-content>
+      <ion-grid color="primary">
+        <ion-row>
+          <ion-col>
+            <div><b>Celular SAMSUNG Galaxy M12 64GB Negro + Audifonos Bluetooth</b></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-buttons>
+              <ion-button class="btn" (click)="openModal()">Detalles</ion-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="div-precio">$519.900</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>              
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

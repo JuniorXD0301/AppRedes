@@ -3,29 +3,11 @@ ion-content {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.backgrounf-pic {
-    background: url("../../assets/img/bg.jpg");
-    background-position: 30%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-}
-
-.background-filter {
-    background: rgba(255, 255, 255, 0.8);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 ion-card {
     background: transparent;
     box-shadow: none;
     text-align: center;
-    margin-top: 130px;
+    margin-top: 100px;
     ion-card-title {
         color: #242020;
         font-size: 30px;
@@ -34,62 +16,25 @@ ion-card {
     ion-card-subtitle {
         color: #242020;
         font-size: 14px;
-        a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #242020;
-            font-size: 15px;
-        }
     }
-    ion-card-content {
-        margin-top: 30px;
-        ion-item {
-            --ion-item-background: transparent;
-            --border-width: 0;
-            --inner-border-width: 0;
-            highlight-color-focused: none;
-            margin-bottom: 15px;
-            ion-input {
-                width: 257px;
-                height: 42px;
-                border-radius: 15px;
-                border: 1px solid #000;
-                font-size: 14px;
-                font-weight: 300;
-                color: #555B5B;
-                --pading-start: 30px;
-            }
-        }
-        a {
-            text-decoration: none;
-            color: #000;
-            font-weight: 300;
-            font-size: 13px;
-        }
-        .btn-section {
-            margin-top: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            ion-button {
-                height: 53px;
-                width: 247px;
-                font-size: 14px;
-                text-transform: none;
-                box-shadow: none;
-                --background: #dedede;
-                font-weight: 300;
-                --border-radius: 15px;
-                color: #000;
-            }
-            span {
-                color: #242020;
-                margin-top: 20px;
-                font-weight: 330;
-                a {
-                    font-weight: 500;
-                }
-            }
-        }
+}
+
+ion-button {
+    margin-top: 30px;
+}
+
+.text {
+    margin-top: 20px;
+    text-align: center;
+    .registrate {
+        cursor: pointer;
     }
+}
+
+.contra {
+    margin-bottom: 20px;
+}
+
+.olvido {
+    cursor: pointer;
 }
